@@ -801,7 +801,9 @@ p {
   background: #fff;
   cursor: pointer;
   text-align: left;
-  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.12s ease, background-color 0.12s ease;
 }
 
 .choice-card:hover {
@@ -879,6 +881,13 @@ p {
   border-color: var(--red);
   background: var(--red);
   color: #fff;
+}
+
+@media (hover: none) {
+  .choice-card:hover,
+  .choice-card:active {
+    transform: none;
+  }
 }
 
 .image-choice {
@@ -13393,6 +13402,21 @@ const renderQuestion = () => {
   `);
 };
 
+const updateChoiceSelectionUi = () => {
+  const choiceButtons = app.querySelectorAll("button[data-choice-id]");
+  choiceButtons.forEach((button) => {
+    const choiceId = button.dataset.choiceId || "";
+    const selected = state.selectedIds.includes(choiceId);
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+
+  const submitButton = app.querySelector('button[data-action="submit-answer"]');
+  if (submitButton) {
+    submitButton.disabled = state.selectedIds.length === 0;
+  }
+};
+
 const renderReview = () => {
   const question = currentQuestion();
   const selectedIds = state.answers[question.id] || [];
@@ -13544,14 +13568,14 @@ const startQuiz = (selectedQuestions, limit) => {
 
 const selectSingle = (choiceId) => {
   state.selectedIds = [choiceId];
-  renderQuestion();
+  updateChoiceSelectionUi();
 };
 
 const toggleMulti = (choiceId) => {
   state.selectedIds = state.selectedIds.includes(choiceId)
     ? state.selectedIds.filter((id) => id !== choiceId)
     : [...state.selectedIds, choiceId];
-  renderQuestion();
+  updateChoiceSelectionUi();
 };
 
 const submitAnswer = () => {
