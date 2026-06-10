@@ -389,6 +389,21 @@ const renderQuestion = () => {
   `);
 };
 
+const updateChoiceSelectionUi = () => {
+  const choiceButtons = app.querySelectorAll("button[data-choice-id]");
+  choiceButtons.forEach((button) => {
+    const choiceId = button.dataset.choiceId || "";
+    const selected = state.selectedIds.includes(choiceId);
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+
+  const submitButton = app.querySelector('button[data-action="submit-answer"]');
+  if (submitButton) {
+    submitButton.disabled = state.selectedIds.length === 0;
+  }
+};
+
 const renderReview = () => {
   const question = currentQuestion();
   const selectedIds = state.answers[question.id] || [];
@@ -540,14 +555,14 @@ const startQuiz = (selectedQuestions, limit) => {
 
 const selectSingle = (choiceId) => {
   state.selectedIds = [choiceId];
-  renderQuestion();
+  updateChoiceSelectionUi();
 };
 
 const toggleMulti = (choiceId) => {
   state.selectedIds = state.selectedIds.includes(choiceId)
     ? state.selectedIds.filter((id) => id !== choiceId)
     : [...state.selectedIds, choiceId];
-  renderQuestion();
+  updateChoiceSelectionUi();
 };
 
 const submitAnswer = () => {

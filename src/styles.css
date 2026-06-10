@@ -794,7 +794,9 @@ p {
   background: #fff;
   cursor: pointer;
   text-align: left;
-  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.12s ease, background-color 0.12s ease;
 }
 
 .choice-card:hover {
@@ -872,6 +874,13 @@ p {
   border-color: var(--red);
   background: var(--red);
   color: #fff;
+}
+
+@media (hover: none) {
+  .choice-card:hover,
+  .choice-card:active {
+    transform: none;
+  }
 }
 
 .image-choice {
