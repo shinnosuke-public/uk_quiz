@@ -1914,14 +1914,16 @@ export const questions = [
         explanation: "「キング・オブ・ポップ」マイケル・ジャクソンはアメリカ出身です。"
       },
       {
-        id: "bts",
-        label: "BTS",
-        explanation: "BTSは韓国のグループです。"
+        id: "niziu",
+        label: "NiziU",
+        explanation:
+          "NiziUは日本のガールズグループ。日本と韓国の共同プロジェクトのオーディションから生まれました。"
       },
       {
-        id: "bob-marley",
-        label: "ボブ・マーリー",
-        explanation: "レゲエの王様ボブ・マーリーはジャマイカ出身です。"
+        id: "mrs-green-apple",
+        label: "Mrs. GREEN APPLE",
+        explanation:
+          "Mrs. GREEN APPLEは日本のバンド。名前は英語ですが、東京で結成されました。"
       }
     ],
     correctChoiceId: "beatles",
