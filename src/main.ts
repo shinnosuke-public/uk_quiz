@@ -190,7 +190,7 @@ const renderHome = () => {
     <section class="hero-panel">
       <div class="hero-copy">
         <p class="eyebrow">旅の前に、機内で、ホテルで</p>
-        <h2>家族で遊べる<br>イギリス入門クイズ</h2>
+        <h2>イギリス入門クイズ</h2>
         <p>国旗や首都から、ハリー・ポッターの駅まで。旅行がもっと楽しくなる${questions.length}問を集めました。オフラインで遊べます。</p>
         <div class="button-row">
           <button class="primary-button big" data-action="start">クイズを始める</button>
