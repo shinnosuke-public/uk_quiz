@@ -327,7 +327,7 @@ const buildStaticFallback = ({
         </header>
         <section class="hero-panel">
           <div class="hero-copy">
-            <h2>家族で遊べる<br>イギリス入門クイズ</h2>
+            <h2>イギリス入門クイズ</h2>
             <p>国旗や首都から、ハリー・ポッターの駅まで。旅行がもっと楽しくなる${questions.length}問を集めました。</p>
             <p class="static-note">この画面が出ている場合は、iPhoneのプレビュー用表示です。点数保存はありませんが、選択肢をタップして答えと解説を見ながら遊べます。</p>
             <div class="button-row">
