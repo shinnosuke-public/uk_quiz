@@ -406,13 +406,13 @@ export const questions = [
     subcategoryLabel: "中級",
     difficulty: "normal",
     title: "日本との時差",
-    prompt: "イギリスと日本の時差は、だいたいどれくらい？",
+    prompt: "いま（夏）のイギリスと日本の時差は、どれくらい？",
     choices: [
       {
-        id: "nine-hours",
-        label: "約9時間（日本が先に進んでいる）",
+        id: "eight-hours",
+        label: "約8時間（日本が先に進んでいる）",
         explanation:
-          "日本の方が約9時間進んでいます。日本がお昼の12時のとき、イギリスはまだ朝の3時です。"
+          "夏の時差は8時間で、日本の方が進んでいます。日本がお昼の12時のとき、イギリスはまだ朝の4時です。"
       },
       {
         id: "three-hours",
@@ -431,9 +431,9 @@ export const questions = [
         explanation: "地球は丸いので、これだけ離れた国と同じ時刻にはなりません。"
       }
     ],
-    correctChoiceId: "nine-hours",
+    correctChoiceId: "eight-hours",
     overallExplanation:
-      "時差は冬は9時間、夏は「サマータイム」で8時間になります。着いたら時計を合わせて、日本に電話するときは「今、日本は何時かな？」と考えてみよう。"
+      "イギリスには3月末から10月末まで、時計を1時間早める「サマータイム」があります。夏は日が長いので、その分時間を有効に使おうという仕組みです。だから時差は夏が8時間、冬（11月〜3月）は9時間。日本に電話するときは「今、日本は何時かな？」と考えてみよう。"
   },
 
   {
@@ -908,9 +908,9 @@ export const questions = [
     choices: [
       {
         id: "city-walls",
-        label: "約2000年前からの城壁",
+        label: "城壁",
         explanation:
-          "チェスターは古代ローマ人が作った要塞の街。街を囲む城壁はイギリスで一番完全な形で残っていて、上をぐるりと一周歩けます。"
+          "チェスターは約2000年前に古代ローマ人が作った要塞の街。街を囲む城壁はイギリスで一番完全な形で残っていて、上をぐるりと一周歩けます。"
       },
       {
         id: "moat",
@@ -1693,7 +1693,47 @@ export const questions = [
     ],
     correctChoiceId: "trench-coat",
     overallExplanation:
-      "トレンチコートを作ったのはバーバリーなどのイギリスのブランド。学生に人気のダッフルコートも、イギリス海軍が着て広まったコートです。イギリスは雨が多いから、コートの本場になりました。"
+      "トレンチコートを作ったのはバーバリーなどのイギリスのブランド。肩のベルトや背中の布など、デザインのひとつひとつに軍隊時代の役割がありました。イギリスは雨が多いから、コートの本場になったんです。"
+  },
+  {
+    id: "origin-fashion-duffle",
+    type: "single-text-choice",
+    category: "origin",
+    categoryLabel: "イギリス発祥クイズ",
+    subcategory: "fashion",
+    subcategoryLabel: "ファッション",
+    difficulty: "normal",
+    title: "海軍が広めたコート",
+    prompt: "イギリス海軍の兵士たちが着て広まったコートはどれ？",
+    choices: [
+      {
+        id: "duffle-coat",
+        label: "ダッフルコート",
+        explanation:
+          "棒型のボタン「トグル」が特徴のダッフルコートは、イギリス海軍が着て広まりました。寒い海の上で、手袋をしたままでも留め外しできるようにした工夫です。"
+      },
+      {
+        id: "pea-coat",
+        label: "ピーコート",
+        explanation:
+          "ピーコートも海軍のコートですが、オランダなどヨーロッパ大陸の海軍から広まったと言われています。"
+      },
+      {
+        id: "mods-coat",
+        label: "モッズコート",
+        explanation:
+          "モッズコートの正体はアメリカ軍のパーカ。ただし1960年代にイギリスの若者「モッズ」が愛用したことでこの名前がつきました。おしい！"
+      },
+      {
+        id: "riders-jacket",
+        label: "ライダースジャケット",
+        explanation:
+          "ライダースジャケットはアメリカ生まれ。バイク乗りのための革ジャンです。"
+      }
+    ],
+    correctChoiceId: "duffle-coat",
+    overallExplanation:
+      "戦争が終わって大量にあまった海軍のダッフルコートが安く売り出されると、学生や登山家に大人気に。日本でも学生コートの定番になりました。生地の名前はベルギーの町デュッフェルからきています。"
   },
   {
     id: "origin-fashion-sailor",
@@ -2064,7 +2104,83 @@ export const questions = [
       }
     ],
     overallExplanation:
-      "プーさん、ピーターパン、アリス、101匹わんちゃんは、ぜんぶイギリス生まれ。映画「メリー・ポピンズ」の舞台もロンドンです。ロンドンの街には物語ゆかりの場所がたくさんあるので、探しながら歩いてみよう。"
+      "プーさん、ピーターパン、アリス、101匹わんちゃんは、ぜんぶイギリス生まれ。ロンドンの街には物語ゆかりの場所がたくさんあるので、探しながら歩いてみよう。"
+  },
+  {
+    id: "origin-culture-mary-poppins",
+    type: "single-text-choice",
+    category: "origin",
+    categoryLabel: "イギリス発祥クイズ",
+    subcategory: "culture",
+    subcategoryLabel: "文化・物語",
+    difficulty: "normal",
+    title: "空からくる家庭教師",
+    prompt: "傘をさして空から降りてくる魔法の家庭教師『メリー・ポピンズ』。物語の舞台はどの街？",
+    choices: [
+      {
+        id: "london",
+        label: "ロンドン",
+        explanation:
+          "メリー・ポピンズが東風に乗ってやってくるのは、ロンドンの桜通り17番地にあるバンクス家です。"
+      },
+      {
+        id: "new-york",
+        label: "ニューヨーク",
+        explanation: "ニューヨークではありません。霧の似合うあの街です。"
+      },
+      {
+        id: "paris",
+        label: "パリ",
+        explanation: "パリが舞台の有名な物語は『ノートルダムの鐘』などです。"
+      },
+      {
+        id: "sydney",
+        label: "シドニー",
+        explanation:
+          "実は作者P.L.トラバースはオーストラリア生まれ。でも物語を書いたのはイギリスに移り住んでからで、舞台もロンドンです。"
+      }
+    ],
+    correctChoiceId: "london",
+    overallExplanation:
+      "映画の名曲「鳩にエサを（Feed the Birds）」でおばあさんが座っているのは、セントポール大聖堂の階段です。大聖堂に行ったら、映画のワンシーンを思い出してみてね。"
+  },
+  {
+    id: "origin-culture-bears",
+    type: "single-text-choice",
+    category: "origin",
+    categoryLabel: "イギリス発祥クイズ",
+    subcategory: "culture",
+    subcategoryLabel: "文化・物語",
+    difficulty: "easy",
+    title: "イギリス生まれのクマ",
+    prompt: "次のクマのキャラクターのうち、イギリス生まれはどれ？",
+    choices: [
+      {
+        id: "paddington",
+        label: "パディントン・ベア",
+        explanation:
+          "ペルーからやって来て、ロンドンのパディントン駅で見つかったクマだから名前がパディントン。イギリスの作家マイケル・ボンドの物語です。"
+      },
+      {
+        id: "rilakkuma",
+        label: "リラックマ",
+        explanation: "リラックマは日本（サンエックス）のキャラクターです。"
+      },
+      {
+        id: "kumamon",
+        label: "くまモン",
+        explanation: "くまモンは熊本県のPRキャラクターです。"
+      },
+      {
+        id: "duffy",
+        label: "ダッフィー",
+        explanation:
+          "ダッフィーはアメリカのディズニーのキャラクター。実は東京ディズニーシーで大人気になって世界に広まりました。"
+      }
+    ],
+    correctChoiceId: "paddington",
+    overallExplanation:
+      "パディントンの大好物はマーマレードサンド。ロンドンのパディントン駅には銅像もあります。くまのプーさんもイギリス生まれなので、イギリスは名物グマの国なんです。"
   },
   {
     id: "origin-culture-peter-rabbit",
