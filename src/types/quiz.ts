@@ -38,6 +38,8 @@ export type BaseQuestion = {
   difficulty: Difficulty;
   title: string;
   prompt: string;
+  questionImageId?: string;
+  questionImageAlt?: string;
   overallExplanation: string;
 };
 

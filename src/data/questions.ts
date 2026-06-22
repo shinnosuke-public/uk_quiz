@@ -856,6 +856,128 @@ export const questions = [
     overallExplanation:
       "イギリスの人口は日本の約半分ですが、ロンドンには世界中から人が集まっていて、300以上の言語が話されていると言われています。"
   },
+  {
+    id: "general-hard-pub-count",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "イギリスのパブの数",
+    prompt: "2025年時点で、イギリスにはパブが何軒ある？",
+    choices: [
+      {
+        id: "about-600",
+        label: "約600軒（日本の映画館の数）",
+        explanation:
+          "約600軒では少なすぎます。これは日本全国の映画館の数に近い数字です。"
+      },
+      {
+        id: "about-3000",
+        label: "約3,000軒（日本のマクドナルドの数）",
+        explanation:
+          "約3,000軒でもまだ少なめ。これは日本のマクドナルドの店舗数に近い数字です。"
+      },
+      {
+        id: "about-23000",
+        label: "約23,000軒（日本のスーパーの数）",
+        explanation:
+          "約23,000軒は日本のスーパーの数に近い数字ですが、イギリスのパブはその約2倍あります。"
+      },
+      {
+        id: "about-45000",
+        label: "約45,000軒（日本の保育園と幼稚園の合計数）",
+        explanation:
+          "正解！ 日本の保育園と幼稚園を合わせた数に近い数字です。"
+      }
+    ],
+    correctChoiceId: "about-45000",
+    overallExplanation:
+      "日本のコンビニは約5万6,000軒で、パブより多く見えます。でも人口は日本が約1億2,300万人、イギリスが約7,000万人。人口で割ると、日本のコンビニは約2,200人に1軒、イギリスのパブは約1,600人に1軒です。つまり1人あたりでは、イギリスのパブの方が多いのです。パブはお酒を飲むだけでなく、食事や会話を楽しみ、地域の人が集まる場所。イギリスの暮らしと文化に深く根付いています。"
+  },
+  {
+    id: "general-hard-green-number-plate",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "ナンバープレートの緑の印",
+    prompt: "イギリスでは、ナンバープレートの数字の左に緑色の印がある車があります。これは何を表している？",
+    questionImageId: "uk-green-reg-num",
+    questionImageAlt: "左端に緑色の印が付いたイギリスのナンバープレート",
+    choices: [
+      {
+        id: "taxi",
+        label: "タクシー",
+        explanation:
+          "タクシー専用の印ではありません。電気自動車のタクシーなら、この緑色の印が付くことがあります。"
+      },
+      {
+        id: "electric-vehicle",
+        label: "電気自動車",
+        explanation:
+          "正解！ 緑色の印は、走行中に排気ガスを出さないゼロエミッション車の目印です。"
+      },
+      {
+        id: "royal-car",
+        label: "王室関係者の車",
+        explanation:
+          "王室とは関係ありません。環境にやさしい車だと見分けるための印です。"
+      },
+      {
+        id: "rental-car",
+        label: "レンタカー",
+        explanation:
+          "レンタカー専用の印ではありません。車の所有者ではなく、動力の種類を表しています。"
+      }
+    ],
+    correctChoiceId: "electric-vehicle",
+    overallExplanation:
+      "この緑色の帯は「グリーン・フラッシュ」と呼ばれ、電気自動車など、走行中に排気ガスを出さない車に付けられます。2025年に新しく登録された乗用車のうち、純電気自動車の割合は日本では約1.4％、イギリスでは約23％。イギリスでは、ほぼ4台に1台が電気自動車です。テスラの累計販売・納車台数の目安も、日本の約3万5,000台に対してイギリスは25万台以上。街で電気自動車を見かける機会は、イギリスの方がずっと多いのです。"
+  },
+  {
+    id: "general-hard-home-air-conditioning",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "家庭のエアコン普及率",
+    prompt: "イギリスの一般家庭で、エアコンがある家の割合は？",
+    choices: [
+      {
+        id: "about-5-percent",
+        label: "約5％",
+        explanation:
+          "正解！ 調査によって差がありますが、エアコンがある家は約2〜5％と推計されています。"
+      },
+      {
+        id: "about-15-percent",
+        label: "約15％",
+        explanation:
+          "実際はもっと少なく、エアコンがある家は20軒に1軒あるかどうかです。"
+      },
+      {
+        id: "about-50-percent",
+        label: "約50％",
+        explanation:
+          "半分もの家庭にはありません。暑い日も扇風機や窓からの風でしのぐ家が多いです。"
+      },
+      {
+        id: "about-80-percent",
+        label: "約80％",
+        explanation:
+          "日本では当たり前に見えるエアコンですが、イギリスの家庭ではまだ珍しい設備です。"
+      }
+    ],
+    correctChoiceId: "about-5-percent",
+    overallExplanation:
+      "イギリスは本来、夏でも比較的涼しく、エアコンが必要になる時期が短いため、家庭にはあまり普及してきませんでした。日本では90％以上の家庭にエアコンがあります。ところが近年は地球温暖化の影響で、イギリスでも熱波や記録的な暑さが増えています。エアコンがなく、冬の寒さを防ぐため熱を逃がしにくく造られた家も多いので、暑い日が続くと室内までかなり暑くなり、眠れないなど大変なことがあります。"
+  },
 
   {
     id: "general-hard-greenwich",

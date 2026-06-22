@@ -169,6 +169,19 @@ const getChoiceImageMarkup = (choice) => {
   return getFlagSvg(imageId) || getIllustrationSvg(imageId);
 };
 
+const getQuestionImageMarkup = (question) => {
+  if (!question.questionImageId) {
+    return "";
+  }
+
+  const imageDataUri = getMapImageDataUri(question.questionImageId);
+  if (!imageDataUri) {
+    return "";
+  }
+
+  return `<img class="question-image" src="${imageDataUri}" alt="${escapeHtml(question.questionImageAlt || "問題の写真")}">`;
+};
+
 const renderShell = (content) => {
   app.innerHTML = `
     <main class="app-shell">
@@ -377,6 +390,7 @@ const renderQuestion = () => {
         <span class="meta-chip soft">${escapeHtml(difficultyLabel(question.difficulty) || "")}</span>
         ${question.type === "multi-select" ? '<span class="meta-chip multi">複数選択</span>' : ""}
       </div>
+      ${question.questionImageId ? `<div class="question-image-frame">${getQuestionImageMarkup(question)}</div>` : ""}
       <h2 class="prompt">${escapeHtml(question.prompt)}</h2>
       <div class="${question.type === "single-image-choice" ? "choices-grid image-grid" : "choices-grid text-grid"}">
         ${choicesHtml}

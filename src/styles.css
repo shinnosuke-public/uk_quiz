@@ -773,6 +773,20 @@ p {
   font-size: clamp(1.25rem, 5vw, 1.6rem);
 }
 
+.question-image-frame {
+  overflow: hidden;
+  margin: 14px 0 16px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-small);
+  background: #fff;
+}
+
+.question-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .choices-grid {
   display: grid;
   gap: 10px;

@@ -116,6 +116,19 @@ const buildStaticFallback = ({
     return getFlagSvg(choice.imageId) || getIllustrationSvg(choice.imageId);
   };
 
+  const getQuestionImageMarkup = (question) => {
+    if (!question.questionImageId) {
+      return "";
+    }
+
+    const imageDataUri = getMapImageDataUri(question.questionImageId);
+    if (!imageDataUri) {
+      return "";
+    }
+
+    return `<img class="question-image" src="${imageDataUri}" alt="${escapeHtml(question.questionImageAlt || "問題の写真")}">`;
+  };
+
   const groupedQuestions = new Map();
   questions.forEach((question, index) => {
     const key = `${question.categoryLabel}：${question.subcategoryLabel || "まとめ"}`;
@@ -264,6 +277,7 @@ const buildStaticFallback = ({
             <span class="meta-chip soft">${escapeHtml(difficultyLabel(question.difficulty))}</span>
             ${question.type === "multi-select" ? '<span class="meta-chip multi">複数選択</span>' : ""}
           </div>
+          ${question.questionImageId ? `<div class="question-image-frame">${getQuestionImageMarkup(question)}</div>` : ""}
           <h2 class="prompt">${escapeHtml(question.prompt)}</h2>
           <fieldset class="static-choices ${isImageQuestion ? "static-image-grid" : "static-text-grid"}">
             <legend class="sr-only">選択肢</legend>
