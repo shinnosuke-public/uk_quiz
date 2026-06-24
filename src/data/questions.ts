@@ -359,6 +359,50 @@ export const questions = [
       "駅やニュースでも普通に「the Tube」と言います。電車に乗るときは「Mind the gap!（すき間に注意！）」というアナウンスにも耳をすませてみよう。"
   },
   {
+    id: "general-normal-british-sky",
+    type: "single-image-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "normal",
+    subcategoryLabel: "中級",
+    difficulty: "normal",
+    title: "イギリスでよく見る空",
+    prompt: "イギリスでよく見かける天気や空は、どんな感じ？",
+    choices: [
+      {
+        id: "cumulonimbus",
+        label: "入道雲",
+        imageId: "cloud-cumulonimbus",
+        explanation:
+          "入道雲は積乱雲のこと。イギリスでも発生しますが、高温多湿な日本の真夏ほど頻繁には見かけません。"
+      },
+      {
+        id: "clear-sky",
+        label: "快晴",
+        imageId: "cloud-clear",
+        explanation:
+          "イギリスにも気持ちのよい快晴の日はあります。ただし、雲ひとつない青空が長く続く日は、日本の晴れた季節ほど多くありません。"
+      },
+      {
+        id: "grey-clouds",
+        label: "灰色の雲",
+        imageId: "cloud-grey",
+        explanation:
+          "正解！ 大西洋から湿った空気や前線がやって来るため、空を覆う灰色の雲をよく見かけます。"
+      },
+      {
+        id: "lightning-sky",
+        label: "雷の空",
+        imageId: "cloud-lightning",
+        explanation:
+          "イギリスでも雷雨は起こり、特に夏のイングランド南東部などで見られますが、いつもの空というわけではありません。"
+      }
+    ],
+    correctChoiceId: "grey-clouds",
+    overallExplanation:
+      "イギリスは大西洋から湿った空気が運ばれやすく、前線が通ると灰色の雲が広がり、細かな雨が長く続くことがあります。もちろん青空の日もありますが、天気が変わりやすいのがイギリスらしさ。日本の夏を象徴するような大きな入道雲は比較的少なく、同じ季節でも国が変わると空の表情も変わります。"
+  },
+  {
     id: "general-normal-palace",
     type: "single-text-choice",
     category: "general",
@@ -664,6 +708,46 @@ export const questions = [
     correctChoiceId: "further-north",
     overallExplanation:
       "そんなに北なのに冬が東京より少し寒いくらいなのは、あたたかい海流と風のおかげ。そのかわり夏は涼しくて、30℃を超える日はめずらしいほどです。チェスターはロンドンよりさらに約200km北にあるので、もう少し涼しいよ。夏は夜10時ごろまで明るいので、時間の感覚がふしぎになるかも！"
+  },
+  {
+    id: "general-hard-london-summer-sunset",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "ロンドンの夏の日の入り",
+    prompt: "7月中旬、ロンドンで太陽が沈むのは何時ごろ？（同じ時期の東京は午後7時ごろ）",
+    choices: [
+      {
+        id: "seven-pm",
+        label: "午後7時",
+        explanation:
+          "これは同じ時期の東京の日の入りに近い時刻。ロンドンの夏の夕方は、まだまだ明るいです。"
+      },
+      {
+        id: "eight-pm",
+        label: "午後8時",
+        explanation:
+          "午後8時でも太陽はまだ空にあります。日中のような明るさが残っていることもあります。"
+      },
+      {
+        id: "nine-pm",
+        label: "午後9時",
+        explanation:
+          "正解！ 7月15日のロンドンの日の入りは、年によって数分変わりますが、午後9時10分すぎです。"
+      },
+      {
+        id: "ten-pm",
+        label: "午後10時",
+        explanation:
+          "日の入りは午後9時すぎですが、その後も薄明るい時間が続くため、午後10時ごろまで明るく感じることがあります。"
+      }
+    ],
+    correctChoiceId: "nine-pm",
+    overallExplanation:
+      "7月15日ごろの昼の長さは、東京が約14時間20分なのに対して、ロンドンは約16時間10分。ロンドンは東京よりずっと北にあり、さらに夏時間で時計を1時間進めているため、日の入りが午後9時すぎになります。夏は夜まで観光を楽しめますが、冬は反対に昼が短く、冬至ごろのロンドンは8時間足らず。東京の約9時間45分よりも早く暗くなります。"
   },
   {
     id: "general-hard-anthem",

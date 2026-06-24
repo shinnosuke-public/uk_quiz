@@ -128,7 +128,20 @@ p {
   border-radius: var(--radius);
   background: var(--card);
   box-shadow: var(--shadow-card);
-  animation: rise 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: card-fade 0.3s ease-out both;
+}
+
+/*
+ * Safariでtransform付きのカードを再描画すると、見た目とクリック領域が
+ * ずれることがあるため、操作要素を含むカードは透明度だけで切り替える。
+ */
+@keyframes card-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes rise {

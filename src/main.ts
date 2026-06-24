@@ -133,9 +133,15 @@ const escapeHtml = (value) =>
     .replace(/'/g, "&#039;");
 
 const setScreen = (screen) => {
+  // Safariでは、長い画面をDOM置換してからスクロール位置を戻すと、
+  // 表示位置とクリック判定がずれることがある。先に最上部へ戻してから描画する。
+  const activeElement = document.activeElement;
+  if (activeElement instanceof HTMLElement) {
+    activeElement.blur();
+  }
+  window.scrollTo(0, 0);
   state.screen = screen;
   render();
-  window.scrollTo({ top: 0, behavior: "auto" });
 };
 
 const currentQuestion = () => state.questionOrder[state.currentIndex];
@@ -589,14 +595,21 @@ const submitAnswer = () => {
 };
 
 const nextQuestion = () => {
-  if (state.currentIndex + 1 >= state.questionOrder.length) {
-    setScreen("result");
-    return;
-  }
+  const isLastQuestion = state.currentIndex + 1 >= state.questionOrder.length;
 
-  state.currentIndex += 1;
-  state.selectedIds = [];
-  setScreen("question");
+  // SafariのローカルHTML表示では、スクロールした解説画面を即座にDOM置換すると
+  // 次画面の見た目とクリック領域がずれる。旧画面を先にスクロールし、描画を1回待つ。
+  window.scrollTo(0, 0);
+  window.requestAnimationFrame(() => {
+    if (isLastQuestion) {
+      setScreen("result");
+      return;
+    }
+
+    state.currentIndex += 1;
+    state.selectedIds = [];
+    setScreen("question");
+  });
 };
 
 const quitQuiz = () => {
@@ -636,7 +649,12 @@ const handleClick = (event) => {
   if (action === "select-single" && choiceId) selectSingle(choiceId);
   if (action === "toggle-multi" && choiceId) toggleMulti(choiceId);
   if (action === "submit-answer") submitAnswer();
-  if (action === "next-question") nextQuestion();
+  if (action === "next-question") {
+    if (actionElement instanceof HTMLButtonElement) {
+      actionElement.disabled = true;
+    }
+    nextQuestion();
+  }
   if (action === "quit-quiz") quitQuiz();
 };
 

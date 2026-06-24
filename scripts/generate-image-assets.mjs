@@ -16,7 +16,11 @@ const images = [
   ["map-niigata", "src/assets/images/web/niigata-map.jpg"],
   ["map-australia", "src/assets/images/web/australia-map.jpg"],
   ["map-chile", "src/assets/images/web/chile-map.jpg"],
-  ["uk-green-reg-num", "src/assets/images/uk-green-reg-num.jpg"]
+  ["uk-green-reg-num", "src/assets/images/uk-green-reg-num.jpg"],
+  ["cloud-cumulonimbus", "src/assets/images/web/cloud-cumulonimbus.jpg"],
+  ["cloud-clear", "src/assets/images/web/cloud-clear.jpg"],
+  ["cloud-grey", "src/assets/images/web/cloud-grey.jpg"],
+  ["cloud-lightning", "src/assets/images/web/cloud-lightning.jpg"]
 ];
 
 const entries = await Promise.all(
