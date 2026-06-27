@@ -225,7 +225,15 @@ const renderHome = () => {
       <div><span>${stats.completedSessions}<small class="unit">回</small></span><small>クリア回数</small></div>
       <div><span class="date-value">${stats.lastPlayedDate || "—"}</span><small>前回プレイ</small></div>
     </section>
-    <p class="latest-note">最新版: 2026/6/27 中級に3問追加しました。</p>
+    <section class="release-notes" aria-label="更新履歴">
+      <h3>更新履歴</h3>
+      <ul>
+        <li>2026/6/12 イギリスクイズ初版リリース 63問</li>
+        <li>2026/6/22 上級に3問追加</li>
+        <li>2026/6/24 中級・上級に2問追加</li>
+        <li class="is-latest">最新版: 2026/6/27 中級に3問追加</li>
+      </ul>
+    </section>
   `);
 };
 

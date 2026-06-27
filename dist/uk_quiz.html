@@ -213,13 +213,39 @@ p {
   backdrop-filter: blur(4px);
 }
 
-.latest-note {
-  margin: 10px 2px 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.82rem;
+.release-notes {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 12px 14px;
+  color: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.release-notes h3 {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.release-notes ul {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.release-notes li {
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
+  line-height: 1.45;
+}
+
+.release-notes .is-latest {
+  color: #fff;
 }
 
 .error-banner {
@@ -15321,7 +15347,15 @@ const renderHome = () => {
       <div><span>${stats.completedSessions}<small class="unit">回</small></span><small>クリア回数</small></div>
       <div><span class="date-value">${stats.lastPlayedDate || "—"}</span><small>前回プレイ</small></div>
     </section>
-    <p class="latest-note">最新版: 2026/6/27 中級に3問追加しました。</p>
+    <section class="release-notes" aria-label="更新履歴">
+      <h3>更新履歴</h3>
+      <ul>
+        <li>2026/6/12 イギリスクイズ初版リリース 63問</li>
+        <li>2026/6/22 上級に3問追加</li>
+        <li>2026/6/24 中級・上級に2問追加</li>
+        <li class="is-latest">最新版: 2026/6/27 中級に3問追加</li>
+      </ul>
+    </section>
   `);
 };
 
