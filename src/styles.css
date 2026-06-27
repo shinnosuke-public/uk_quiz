@@ -206,6 +206,15 @@ p {
   backdrop-filter: blur(4px);
 }
 
+.latest-note {
+  margin: 10px 2px 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
 .error-banner {
   position: fixed;
   top: 0;

@@ -110,7 +110,7 @@ const buildStaticFallback = ({
 
     const mapImageDataUri = getMapImageDataUri(choice.imageId);
     if (mapImageDataUri) {
-      return `<img class="choice-raster-image" src="${mapImageDataUri}" alt="選択肢${escapeHtml(key)}の地図">`;
+      return `<img class="choice-raster-image" src="${mapImageDataUri}" alt="選択肢${escapeHtml(key)}: ${escapeHtml(choice.label)}">`;
     }
 
     return getFlagSvg(choice.imageId) || getIllustrationSvg(choice.imageId);

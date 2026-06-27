@@ -20,7 +20,11 @@ const images = [
   ["cloud-cumulonimbus", "src/assets/images/web/cloud-cumulonimbus.jpg"],
   ["cloud-clear", "src/assets/images/web/cloud-clear.jpg"],
   ["cloud-grey", "src/assets/images/web/cloud-grey.jpg"],
-  ["cloud-lightning", "src/assets/images/web/cloud-lightning.jpg"]
+  ["cloud-lightning", "src/assets/images/web/cloud-lightning.jpg"],
+  ["taxi-hand-up", "src/assets/images/web/taxi-up.jpg"],
+  ["taxi-hand-side", "src/assets/images/web/taxi-side.jpg"],
+  ["taxi-hand-circle", "src/assets/images/web/taxi-circle.jpg"],
+  ["taxi-hand-cross", "src/assets/images/web/taxi-cross.jpg"]
 ];
 
 const entries = await Promise.all(

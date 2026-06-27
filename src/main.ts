@@ -225,6 +225,7 @@ const renderHome = () => {
       <div><span>${stats.completedSessions}<small class="unit">回</small></span><small>クリア回数</small></div>
       <div><span class="date-value">${stats.lastPlayedDate || "—"}</span><small>前回プレイ</small></div>
     </section>
+    <p class="latest-note">最新版: 2026/6/27 中級に2問追加しました。</p>
   `);
 };
 

@@ -359,6 +359,91 @@ export const questions = [
       "駅やニュースでも普通に「the Tube」と言います。電車に乗るときは「Mind the gap!（すき間に注意！）」というアナウンスにも耳をすませてみよう。"
   },
   {
+    id: "general-normal-escalator-side",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "normal",
+    subcategoryLabel: "中級",
+    difficulty: "normal",
+    title: "エスカレーターの立ち位置",
+    prompt:
+      "東京では左側、関西では右側に立つことが多いエスカレーター。イギリスでは、立ち止まる人はどちら側に立つ？",
+    choices: [
+      {
+        id: "right",
+        label: "右側",
+        explanation:
+          "正解！ ロンドン地下鉄などでは、立ち止まる人は右側、歩く人は左側を通るのが基本です。"
+      },
+      {
+        id: "left",
+        label: "左側",
+        explanation:
+          "東京では左側に立つことが多いですが、イギリスでは逆に右側に立つのが基本です。"
+      },
+      {
+        id: "middle",
+        label: "真ん中",
+        explanation:
+          "真ん中に立つと、後ろから来る人が通りにくくなります。イギリスでは右側に寄るのが基本です。"
+      },
+      {
+        id: "no-rule",
+        label: "決まったルールはない",
+        explanation:
+          "地域や場所で違いはありますが、ロンドン地下鉄などでは「右側に立つ」という案内がよく見られます。"
+      }
+    ],
+    correctChoiceId: "right",
+    overallExplanation:
+      "イギリスではエスカレーターで右側に立ち、左側を空けておくことが多いです。東京とは逆なので、ロンドンの駅でうっかり左側に立つと後ろの人が通りにくいことも。もちろん混んでいる時や小さな子どもと一緒の時は、安全を最優先にしよう。"
+  },
+  {
+    id: "general-normal-taxi-hailing",
+    type: "single-image-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "normal",
+    subcategoryLabel: "中級",
+    difficulty: "normal",
+    title: "タクシーの止め方",
+    prompt: "イギリスでタクシーを止めるとき、手はどのように挙げるのが自然？",
+    choices: [
+      {
+        id: "hand-up",
+        label: "手を上に挙げる",
+        imageId: "taxi-hand-up",
+        explanation:
+          "これは日本式のタクシーの止め方です。イギリスでは、高く手を挙げるよりも横に手を出す方が自然です。"
+      },
+      {
+        id: "hand-side",
+        label: "横に手を出す",
+        imageId: "taxi-hand-side",
+        explanation:
+          "正解！ 道路の方に向かって、腕を横に軽く出して合図します。大きく振り回さなくても大丈夫です。"
+      },
+      {
+        id: "hand-circle",
+        label: "両手で大きな丸",
+        imageId: "taxi-hand-circle",
+        explanation:
+          "これはタクシーを止める合図としては大げさすぎます。イギリスでは横に手を出すくらいで伝わります。"
+      },
+      {
+        id: "hand-cross",
+        label: "両手を上に挙げて手のひらでクロス",
+        imageId: "taxi-hand-cross",
+        explanation:
+          "こんな謎のポーズをしていたら、周りの人が不審がるのでやめましょう。タクシーには横に手を出して合図します。"
+      }
+    ],
+    correctChoiceId: "hand-side",
+    overallExplanation:
+      "イギリスでタクシーを止めるときは、道路の方に向かって片手を横に出すのが自然です。日本のように高く手を挙げるよりも、少し控えめな合図。ロンドンの黒いタクシーは、屋根の「TAXI」ライトがついていれば空車のサインです。"
+  },
+  {
     id: "general-normal-british-sky",
     type: "single-image-choice",
     category: "general",
