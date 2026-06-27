@@ -400,6 +400,46 @@ export const questions = [
       "イギリスではエスカレーターで右側に立ち、左側を空けておくことが多いです。東京とは逆なので、ロンドンの駅でうっかり左側に立つと後ろの人が通りにくいことも。もちろん混んでいる時や小さな子どもと一緒の時は、安全を最優先にしよう。"
   },
   {
+    id: "general-normal-lift-floor",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "normal",
+    subcategoryLabel: "中級",
+    difficulty: "normal",
+    title: "エレベーターの階数表示",
+    prompt: "日本とイギリスでは、エレベーターにどんな違いがあるでしょう？",
+    choices: [
+      {
+        id: "ground-floor",
+        label: "地上が1階じゃなくて、0階から始まる",
+        explanation:
+          "正解！ イギリスでは、地上階を「Ground Floor」や「0」と表示することがよくあります。"
+      },
+      {
+        id: "sideways",
+        label: "上下だけじゃなくて、横にも移動できる",
+        explanation:
+          "未来っぽいですが、普通のエレベーターは上下に動きます。イギリスならではの違いは階数表示です。"
+      },
+      {
+        id: "up-down-only",
+        label: "上昇専用、下降専用のエレベーターがある",
+        explanation:
+          "混雑対策として乗り場が分かれることはあっても、上昇専用・下降専用が普通というわけではありません。"
+      },
+      {
+        id: "paid",
+        label: "お金をいれないと動かないものがおおい",
+        explanation:
+          "ホテルや駅、デパートのエレベーターで毎回お金を入れることは普通ありません。"
+      }
+    ],
+    correctChoiceId: "ground-floor",
+    overallExplanation:
+      "ヨーロッパでは、地上階を「0階」または「Ground Floor」として、その上を1階、2階…と数えることがよくあります。日本の感覚で「1階」を押すと、地上ではなく1つ上の階に行ってしまうことがあるので注意！ ちなみに「エレベーター」はアメリカ英語で、イギリスではふつう「lift」と言います。"
+  },
+  {
     id: "general-normal-taxi-hailing",
     type: "single-image-choice",
     category: "general",
