@@ -359,6 +359,47 @@ export const questions = [
       "駅やニュースでも普通に「the Tube」と言います。電車に乗るときは「Mind the gap!（すき間に注意！）」というアナウンスにも耳をすませてみよう。"
   },
   {
+    id: "general-normal-regent-hairstyle",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "normal",
+    subcategoryLabel: "中級",
+    difficulty: "normal",
+    title: "リージェント・ストリート由来の髪型",
+    prompt:
+      "ロンドン中心部にある、ゆるくカーブしたリージェント・ストリート（Regent Street）。この通りに由来する髪型はどれ？",
+    choices: [
+      {
+        id: "regent",
+        label: "リーゼント",
+        explanation:
+          "正解！ 左右から後ろへ流した髪の形が、リージェント・ストリートの左右対称のゆるいカーブに似ていることから、この名前で呼ばれるようになりました。"
+      },
+      {
+        id: "seven-three",
+        label: "七三分け",
+        explanation:
+          "七三分けは、髪の分け目を7対3くらいにする髪型。リージェント・ストリートに由来する名前ではありません。"
+      },
+      {
+        id: "ponytail",
+        label: "ポニーテール",
+        explanation:
+          "ポニーテールは、髪を後ろで馬のしっぽのように束ねる髪型です。"
+      },
+      {
+        id: "crew-cut",
+        label: "角刈り",
+        explanation:
+          "角刈りは、頭の上を平らに短く刈り込む髪型。名前の由来はリージェント・ストリートではありません。"
+      }
+    ],
+    correctChoiceId: "regent",
+    overallExplanation:
+      "リーゼントは英語で「Regent style」とも呼ばれる髪型。左右の髪を後ろへなでつけ、後頭部で合わさる形が、リージェント・ストリートのカーブに見立てられました。ロンドンの街の名前が、日本で親しまれている髪型の名前になっているのは面白いですね。"
+  },
+  {
     id: "general-normal-escalator-side",
     type: "single-text-choice",
     category: "general",
@@ -833,6 +874,87 @@ export const questions = [
     correctChoiceId: "further-north",
     overallExplanation:
       "そんなに北なのに冬が東京より少し寒いくらいなのは、あたたかい海流と風のおかげ。そのかわり夏は涼しくて、30℃を超える日はめずらしいほどです。チェスターはロンドンよりさらに約200km北にあるので、もう少し涼しいよ。夏は夜10時ごろまで明るいので、時間の感覚がふしぎになるかも！"
+  },
+  {
+    id: "general-hard-maritime-greenwich",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "グリニッジの世界遺産",
+    prompt: "次のうち、世界遺産に登録されているものは？",
+    choices: [
+      {
+        id: "greenwich-observatory",
+        label: "グリニッジ天文台",
+        explanation:
+          "正解！ 正式な世界遺産名は「Maritime Greenwich（海事都市グリニッジ）」。王立天文台を含む、グリニッジの歴史的な一帯が登録されています。"
+      },
+      {
+        id: "heathrow-airport",
+        label: "ヒースロー空港",
+        explanation:
+          "ヒースロー空港はロンドン最大の国際空港ですが、世界遺産ではありません。"
+      },
+      {
+        id: "buckingham-palace",
+        label: "バッキンガム宮殿",
+        explanation:
+          "バッキンガム宮殿は国王のロンドンの公式な住まいですが、単体では世界遺産に登録されていません。"
+      },
+      {
+        id: "british-museum",
+        label: "大英博物館",
+        explanation:
+          "大英博物館は世界的に有名な博物館ですが、建物そのものは世界遺産ではありません。"
+      }
+    ],
+    correctChoiceId: "greenwich-observatory",
+    overallExplanation:
+      "正確には「天文台だけ」が世界遺産なのではなく、王立天文台を含む「海事都市グリニッジ」全体が世界遺産です。テムズ川沿いの左右対称の建物群Old Royal Naval College、白い古典建築Queen’s House、本初子午線とグリニッジ標準時で有名な王立天文台、Greenwich Parkが含まれます。周辺の建物や、世界遺産エリアへ向かう町の中心部の街並みもその範囲です。"
+  },
+  {
+    id: "general-hard-elizabeth-line-operator",
+    type: "single-text-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "エリザベスラインの運営",
+    prompt:
+      "ロンドンを走るエリザベスライン。2025年から新しい運営会社を通じて、この路線の運行に関わっているのは？",
+    choices: [
+      {
+        id: "tokyo-metro",
+        label: "東京メトロ",
+        explanation:
+          "正解！ 東京メトロは住友商事、イギリスのGo-Aheadと共同出資した会社を通じて、エリザベスラインの運営に関わっています。"
+      },
+      {
+        id: "royal-family",
+        label: "英国王室（ロイヤルファミリー）",
+        explanation:
+          "路線名はエリザベス2世にちなんでいますが、王室が鉄道を運営しているわけではありません。"
+      },
+      {
+        id: "met-police",
+        label: "ロンドン警察",
+        explanation:
+          "ロンドン警察は安全を守る組織で、鉄道路線の運営会社ではありません。"
+      },
+      {
+        id: "dyson",
+        label: "ダイソン",
+        explanation:
+          "ダイソンはイギリスの掃除機やドライヤーで有名な会社。鉄道の運営会社ではありません。"
+      }
+    ],
+    correctChoiceId: "tokyo-metro",
+    overallExplanation:
+      "エリザベスラインは2022年に開業し、2025年5月からは、Go-Ahead・東京メトロ・住友商事の共同出資会社GTS Rail Operationsが、ロンドン交通局（TfL）から委託を受けて日々の列車運行などを担っています。東京メトロと住友商事はそれぞれ17.5%を出資。路線名はエリザベス2世に敬意を表して付けられ、開業した2022年は女王の在位70年（プラチナ・ジュビリー）の年でもありました。"
   },
   {
     id: "general-hard-london-summer-sunset",
