@@ -7,10 +7,7 @@ const outputPath = resolve(root, "src", "assets", "generated", "mapImages.ts");
 
 // src/assets/images/ の原寸PNGから sips で作った縮小JPEG（web/）を使う。
 // 縮小コピーの作り直し:
-//   for f in uk niigata australia chile; do
-//     sips -Z 720 -s format jpeg -s formatOptions 78 \
-//       src/assets/images/$f-map.png --out src/assets/images/web/$f-map.jpg
-//   done
+//   sips -Z 640 -s format jpeg -s formatOptions 72 入力.png --out 出力.jpg
 const images = [
   ["map-uk", "src/assets/images/web/uk-map.jpg"],
   ["map-niigata", "src/assets/images/web/niigata-map.jpg"],
@@ -24,7 +21,24 @@ const images = [
   ["taxi-hand-up", "src/assets/images/web/taxi-up.jpg"],
   ["taxi-hand-side", "src/assets/images/web/taxi-side.jpg"],
   ["taxi-hand-circle", "src/assets/images/web/taxi-circle.jpg"],
-  ["taxi-hand-cross", "src/assets/images/web/taxi-cross.jpg"]
+  ["taxi-hand-cross", "src/assets/images/web/taxi-cross.jpg"],
+  ["country-england", "src/assets/images/web/country_england.jpg"],
+  ["country-scotland", "src/assets/images/web/country_scotland.jpg"],
+  ["country-wales", "src/assets/images/web/country_wales.jpg"],
+  ["country-n-ireland", "src/assets/images/web/country_n-ireland.jpg"],
+  ["manners-tea-slurp", "src/assets/images/web/manners-tea-slurp.jpg"],
+  ["manners-tea-quiet", "src/assets/images/web/manners-tea-quiet.jpg"],
+  ["manners-tea-bow", "src/assets/images/web/manners-tea-bow.jpg"],
+  ["manners-tea-rotate", "src/assets/images/web/manners-tea-rotate.jpg"],
+  ["manners-cutlery-six", "src/assets/images/web/manners-cutlery-six.jpg"],
+  ["manners-cutlery-japan", "src/assets/images/web/manners-cutlery-japan.jpg"],
+  ["manners-cutlery-resting", "src/assets/images/web/manners-cutlery-resting.jpg"],
+  ["manners-cutlery-cross", "src/assets/images/web/manners-cutlery-cross.jpg"],
+  ["manners-restaurant-snap", "src/assets/images/web/manners-restaurant-snap.jpg"],
+  ["manners-restaurant-eye-contact", "src/assets/images/web/manners-restaurant-eye-contact.jpg"],
+  ["manners-restaurant-excuse-me", "src/assets/images/web/manners-restaurant-excuse-me.jpg"],
+  ["manners-restaurant-clap", "src/assets/images/web/manners-restaurant-clap.jpg"],
+  ["manners-afternoon-tea", "src/assets/images/web/manners-afternoon-tea.jpg"]
 ];
 
 const entries = await Promise.all(

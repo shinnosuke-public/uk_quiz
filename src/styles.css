@@ -789,6 +789,13 @@ p {
   background: var(--red);
 }
 
+.meta-chip.cat-manners,
+.mode-kicker.cat-manners,
+.cat-tag.cat-manners {
+  color: #fff;
+  background: #16735d;
+}
+
 .cat-tag {
   display: inline-flex;
   align-items: center;
@@ -814,6 +821,10 @@ p {
 
 .cat-dot.cat-origin {
   background: var(--red);
+}
+
+.cat-dot.cat-manners {
+  background: #16735d;
 }
 
 .prompt {

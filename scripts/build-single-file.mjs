@@ -43,6 +43,12 @@ const stripModuleSyntax = (source) =>
     .replace(/\bexport\s+(const|let|var|function|class)\s+/g, "$1 ");
 
 const assertNoRuntimeNetworkHints = (html) => {
+  // Base64化したローカル画像には、たまたま "cdn" などの文字列が現れることがある。
+  // 埋め込み画像を除いたHTMLだけを検査し、外部URLの混入は引き続き検出する。
+  const htmlWithoutEmbeddedImages = html.replace(
+    /data:image\/[a-z0-9.+-]+;base64,[a-z0-9+/=]+/gi,
+    ""
+  );
   const forbiddenPatterns = [
     /\b(?:src|href|action)\s*=\s*["']https?:\/\//i,
     /\bfetch\s*\(\s*["']https?:\/\//i,
@@ -56,7 +62,7 @@ const assertNoRuntimeNetworkHints = (html) => {
     /analytics/i
   ];
 
-  const found = forbiddenPatterns.find((pattern) => pattern.test(html));
+  const found = forbiddenPatterns.find((pattern) => pattern.test(htmlWithoutEmbeddedImages));
   if (found) {
     throw new Error(`Generated HTML contains a forbidden runtime dependency hint: ${found}`);
   }
@@ -208,10 +214,7 @@ const buildStaticFallback = ({
               <input type="${inputType}" name="${questionId}" value="${escapeHtml(choice.id)}">
               <span class="static-choice-content">
                 ${imageMarkup ? `<span class="flag-frame">${imageMarkup}</span>` : ""}
-                <span class="choice-bottom">
-                  <span class="key-chip" aria-hidden="true">${escapeHtml(key)}</span>
-                  <span class="choice-label">${escapeHtml(label)}</span>
-                </span>
+                ${question.hideChoiceText ? "" : `<span class="choice-bottom"><span class="key-chip" aria-hidden="true">${escapeHtml(key)}</span><span class="choice-label">${escapeHtml(label)}</span></span>`}
               </span>
               <span class="static-verdict ${isCorrect ? "ok" : "ng"}">${isCorrect ? "正解" : "ちがう"}</span>
             </label>

@@ -48,6 +48,14 @@ const quizModes = [
     filter: (question) => question.category === "general" && question.subcategory === "hard"
   },
   {
+    id: "manners-all",
+    group: "マナークイズ",
+    title: "マナー講座",
+    kicker: "旅行で役立つ",
+    description: "紅茶、レストラン、ドア。イギリスで自然にふるまうための7問。",
+    filter: (question) => question.category === "manners"
+  },
+  {
     id: "origin-food",
     group: "イギリス発祥クイズ",
     title: "食べ物",
@@ -232,7 +240,8 @@ const renderHome = () => {
         <li>2026/6/22 上級に3問追加</li>
         <li>2026/6/24 中級・上級に2問追加</li>
         <li>2026/6/27 中級に3問追加</li>
-        <li class="is-latest">最新版: 2026/7/13 中級に1問・上級に2問追加</li>
+        <li>2026/7/13 中級に1問・上級に2問追加</li>
+        <li class="is-latest">最新版: 2026/7/14 マナークイズを7問・上級に1問追加</li>
       </ul>
     </section>
   `);
@@ -241,6 +250,7 @@ const renderHome = () => {
 // 一般クイズ=青、発祥クイズ=赤の色分けに使う
 const modeCategory = (mode) => {
   if (mode.id.startsWith("general")) return "general";
+  if (mode.id.startsWith("manners")) return "manners";
   if (mode.id.startsWith("origin")) return "origin";
   return "challenge";
 };
@@ -376,12 +386,9 @@ const renderQuestion = () => {
       const key = choiceKeyLabels[index];
       if (question.type === "single-image-choice") {
         return `
-          <button class="choice-card image-choice${selected ? " is-selected" : ""}" data-action="select-single" data-choice-id="${escapeHtml(choice.id)}" aria-pressed="${selected}">
+          <button class="choice-card image-choice${selected ? " is-selected" : ""}" data-action="select-single" data-choice-id="${escapeHtml(choice.id)}" aria-pressed="${selected}" aria-label="${escapeHtml(choice.label)}">
             <span class="flag-frame">${getChoiceImageMarkup(choice)}</span>
-            <span class="choice-bottom">
-              <span class="key-chip" aria-hidden="true">${key}</span>
-              <span class="choice-label">${escapeHtml(choice.label)}</span>
-            </span>
+            ${question.hideChoiceText ? "" : `<span class="choice-bottom"><span class="key-chip" aria-hidden="true">${key}</span><span class="choice-label">${escapeHtml(choice.label)}</span></span>`}
           </button>
         `;
       }

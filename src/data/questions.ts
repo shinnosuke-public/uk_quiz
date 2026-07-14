@@ -876,6 +876,52 @@ export const questions = [
       "そんなに北なのに冬が東京より少し寒いくらいなのは、あたたかい海流と風のおかげ。そのかわり夏は涼しくて、30℃を超える日はめずらしいほどです。チェスターはロンドンよりさらに約200km北にあるので、もう少し涼しいよ。夏は夜10時ごろまで明るいので、時間の感覚がふしぎになるかも！"
   },
   {
+    id: "general-hard-england-flag",
+    type: "single-image-choice",
+    category: "general",
+    categoryLabel: "イギリス一般クイズ",
+    subcategory: "hard",
+    subcategoryLabel: "上級",
+    difficulty: "hard",
+    title: "ロンドンがある国の旗",
+    prompt:
+      "イギリスは4つの「国」からできています。ロンドンがあるイングランドの国旗はどれ？",
+    hideChoiceText: true,
+    choices: [
+      {
+        id: "england",
+        label: "イングランドの国旗",
+        imageId: "country-england",
+        explanation:
+          "正解！ 白地に赤い十字の「セント・ジョージ・クロス」が、イングランドの旗です。"
+      },
+      {
+        id: "scotland",
+        label: "スコットランドの国旗",
+        imageId: "country-scotland",
+        explanation:
+          "青地に白い斜め十字の旗はスコットランド。エディンバラやネス湖がある地域です。"
+      },
+      {
+        id: "wales",
+        label: "ウェールズの国旗",
+        imageId: "country-wales",
+        explanation:
+          "赤いドラゴンが目印なのはウェールズ。旗にドラゴンがいるなんて、かなり強そうです。"
+      },
+      {
+        id: "northern-ireland",
+        label: "北アイルランドの旗",
+        imageId: "country-n-ireland",
+        explanation:
+          "赤い斜め十字と王冠が描かれた旗は、北アイルランドを表す旗のひとつです。"
+      }
+    ],
+    correctChoiceId: "england",
+    overallExplanation:
+      "イギリス（UK）は、イングランド・スコットランド・ウェールズ・北アイルランドの4つの「国」からできています。サッカーでは「イギリス代表」ではなく、それぞれの地域が別の代表チームとして出場します。現在開催中のFIFAワールドカップ2026でも、イングランド代表とスコットランド代表が別々に出場しています。"
+  },
+  {
     id: "general-hard-maritime-greenwich",
     type: "single-text-choice",
     category: "general",
@@ -1385,6 +1431,143 @@ export const questions = [
     correctChoiceId: "city-walls",
     overallExplanation:
       "城壁一周は約3km、歩いて1時間ほど。街の中心には「ロウズ」と呼ばれる白黒しましまの木組みの建物が並び、2階部分が連続した通路になっている世界でも珍しい商店街です。ローマ時代と中世が同居した、歩くだけで楽しい街です。"
+  },
+
+  // ===== マナークイズ =====
+  {
+    id: "manners-tea-drinking",
+    type: "single-image-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "紅茶を飲むときの音",
+    prompt: "紅茶を飲むとき、よいとされる作法はどれ？",
+    choices: [
+      { id: "slurp", label: "ズズッと音を立てて飲む", imageId: "manners-tea-slurp", explanation: "おそばなら景気のよい音ですが、紅茶ではカップが少しびっくりします。" },
+      { id: "quietly", label: "音を立てずに飲む", imageId: "manners-tea-quiet", explanation: "正解！ カップをそっと口に運び、静かにひと口。小指を立てる必要はありません。" },
+      { id: "bow", label: "飲む前に一度お辞儀をする", imageId: "manners-tea-bow", explanation: "紅茶への敬意は立派ですが、カップにあいさつしなくても大丈夫です。" },
+      { id: "rotate", label: "カップを時計回りに回してから飲む", imageId: "manners-tea-rotate", explanation: "これはお抹茶をいただくときの作法です。紅茶では、カップを回さずそのまま静かに飲みます。" }
+    ],
+    correctChoiceId: "quietly",
+    overallExplanation: "イギリスのアフタヌーンティーなどでは、紅茶は音を立てずに飲むのが無難です。熱さを確かめたいときも、ズズッと吸うより少し待ってからひと口。いちばん大切なのは、一緒にいる人と気持ちよくお茶の時間を楽しむことです。"
+  },
+  {
+    id: "manners-cutlery-finished",
+    type: "single-image-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "食べ終わりのナイフとフォーク",
+    prompt: "食事が済んだとき、「食べ終わりました」の合図になるナイフとフォークの置き方は？",
+    choices: [
+      { id: "six-oclock", label: "6時の方向にそろえる", imageId: "manners-cutlery-six", explanation: "正解！ 2本を平行にそろえ、柄を手前の6時方向へ。お皿の上の小さな「ごちそうさま」です。" },
+      { id: "five-oclock", label: "向かって右の5時の位置にそろえる", imageId: "manners-cutlery-japan", explanation: "5時方向に置く方法もありますが、イギリスで迷ったら、6時方向にそろえる方が無難です。" },
+      { id: "resting", label: "お皿の上で「ハの字」に開いて置く", imageId: "manners-cutlery-resting", explanation: "これは食べている途中の置き方に見えます。お皿が「まだ続きます」と言っています。" },
+      { id: "cross", label: "お皿の上で十字にクロスさせて置く", imageId: "manners-cutlery-cross", explanation: "食器で海賊旗は作らないでおこう。食べ終わりなら、平行にそろえるのがわかりやすいです。" }
+    ],
+    correctChoiceId: "six-oclock",
+    overallExplanation: "英国式の定番では、ナイフとフォークを平行にそろえ、柄を手前の6時方向に置くと食べ終わりのサインになります。フランス式など地域や店の流儀で違いはありますが、旅行先で完璧を目指しすぎなくても大丈夫。食器をお皿の上にまとめるだけでも、店員さんには十分伝わります。"
+  },
+  {
+    id: "manners-restaurant-attention",
+    type: "single-image-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "店員さんを呼ぶとき",
+    prompt: "レストランで店員さんを呼びたいとき、自然なのはどれ？",
+    choices: [
+      { id: "snap", label: "指パッチン", imageId: "manners-restaurant-snap", explanation: "ジャズの始まりなら格好いいですが、注文には向いていません。" },
+      { id: "eye-contact", label: "目配せをして、来てくれるまで待つ", imageId: "manners-restaurant-eye-contact", explanation: "正解！ 目を合わせて、軽く手を上げるくらいで十分。急がずスマートに待ちます。" },
+      { id: "shout", label: "大きい声で「Excuse me!」と呼ぶ", imageId: "manners-restaurant-excuse-me", explanation: "本当に必要なときは使えますが、店内に響くほど大声にしなくても大丈夫です。" },
+      { id: "clap", label: "パンパン、と拍手を2回する", imageId: "manners-restaurant-clap", explanation: "拍手が起きたら、シェフが登場するショーの始まりかもしれません。" }
+    ],
+    correctChoiceId: "eye-contact",
+    overallExplanation: "イギリスのレストランでは、店員さんと目を合わせて軽く合図するのが自然です。なかなか気づいてもらえないときは、近くに来たタイミングで小さく「Excuse me」と声をかければOK。大切なのは、相手を急かしすぎず丁寧に伝えることです。"
+  },
+  {
+    id: "manners-hold-the-door",
+    type: "single-text-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "手動ドアを開けたら",
+    prompt: "手動のドアを開けたとき、後ろに人がいたらどうするのがいい？",
+    choices: [
+      { id: "hold-door", label: "次の人のために押さえておく", explanation: "正解！ すぐ後ろや近くにいる人なら、ドアを押さえて譲るのが自然な気づかいです。" },
+      { id: "let-go", label: "通った瞬間に勢いよく手を離す", explanation: "ドアが閉じる音まで元気にしなくて大丈夫。後ろの人の鼻先が心配です。" },
+      { id: "close-and-reopen", label: "いったん閉めてから、もう一度開け直す", explanation: "親切心は伝わりますが、ドアに余計な筋トレをさせる必要はありません。" },
+      { id: "guard-door", label: "ドアの前に立って、通行料を集める", explanation: "ここは城門ではありません。通行料ゼロで、さっと譲ろう。" }
+    ],
+    correctChoiceId: "hold-door",
+    overallExplanation: "イギリスでは、後ろに人が近づいていたらドアを押さえておくのはよくある親切です。相手から「Thank you」と言われたら「You’re welcome」や「No problem」と返せば十分。かなり離れている人まで待ち続けて、相手を小走りにさせない気づかいも大切です。"
+  },
+  {
+    id: "manners-afternoon-tea-order",
+    type: "single-text-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "アフタヌーンティーの順番",
+    prompt: "3段アフタヌーンティーは、どの段から食べるのが定番？",
+    questionImageId: "manners-afternoon-tea",
+    questionImageAlt: "下段にサンドイッチ、中段にスコーン、上段にケーキが並ぶ3段アフタヌーンティー",
+    choices: [
+      { id: "top", label: "一番上から", explanation: "ケーキは魅力的ですが、まず甘いものから攻めるとサンドイッチが少しさみしそうです。" },
+      { id: "middle", label: "真ん中から", explanation: "スコーンからでも食べられますが、定番の順番ではその前にサンドイッチがあります。" },
+      { id: "bottom", label: "一番下から", explanation: "正解！ 下段のサンドイッチ、真ん中のスコーン、上段のケーキへと進むのが定番です。" },
+      { id: "no-rule", label: "特に決まりはない", explanation: "厳しい罰則はありませんが、おいしく楽しむための定番の順番はあります。" }
+    ],
+    correctChoiceId: "bottom",
+    overallExplanation: "3段スタンドは、下段にサンドイッチなど塩気のあるもの、中段にスコーン、上段にケーキやペストリーを置くのが定番。食べる順番も下から上へ、塩味から甘味へ進むのが英国式です。ただし店ごとに内容や並びが違うこともあるので、迷ったらスタッフに聞くのがいちばんスマート。"
+  },
+  {
+    id: "manners-please",
+    type: "single-text-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "お願いの魔法の言葉",
+    prompt: "「Can I have tea, ○○○○?」（紅茶をください）。お店でお願いするとき、文の最後にほぼ毎回つけると丁寧な魔法の言葉は？",
+    choices: [
+      { id: "please", label: "Please", explanation: "正解！ 「Can I have tea, please?」で、丁寧で自然なお願いになります。" },
+      { id: "yes", label: "Yes", explanation: "Yesは「はい」。紅茶を肯定している気持ちは伝わりますが、お願いの言葉ではありません。" },
+      { id: "okay", label: "Okay", explanation: "Okayは便利ですが、文末に置くと急に確認テストっぽくなります。" },
+      { id: "thank-you", label: "Thank you", explanation: "ありがとうは注文を受けてもらった後にとても活躍します。順番を少し待ってもらおう。" }
+    ],
+    correctChoiceId: "please",
+    overallExplanation: "「Can I have tea, please?」のように、お願いの文にpleaseを添えると丁寧で自然です。イギリスでは、店員さんなど誰かに頼むときの大切なひと言。受け取るときには「Thank you」も忘れずに。"
+  },
+  {
+    id: "manners-checkout-greeting",
+    type: "single-text-choice",
+    category: "manners",
+    categoryLabel: "マナークイズ",
+    subcategory: "manners",
+    subcategoryLabel: "マナー講座",
+    difficulty: "normal",
+    title: "レジで最初に言うこと",
+    prompt: "スーパーのレジなどで自分の順番が来たら、レジ係の人にまず何と言う？",
+    choices: [
+      { id: "hello", label: "Hi / Hello", explanation: "正解！ まずは「Hi」や「Hello」とあいさつ。短いひと言で、会話の空気がやわらかくなります。" },
+      { id: "thank-you", label: "Thank you", explanation: "ありがとうは会計のあとにも言えるので、ここでは少しだけ出番を待ってもらおう。" },
+      { id: "silent", label: "無言でいい", explanation: "買い物かごは無言でも通じますが、あいさつがあると気持ちよく始められます。" },
+      { id: "please", label: "Please", explanation: "Pleaseはお願いの言葉。レジでまず言うなら、こんにちはの方がぴったりです。" }
+    ],
+    correctChoiceId: "hello",
+    overallExplanation: "イギリスでは、スーパーやカフェでも順番が来たら「Hi」「Hello」と軽くあいさつするのが自然です。会計後には「Thank you」、店員さんから「Have a nice day!」と言われたら「You too!」と返せたらばっちりです。"
   },
 
   // ===== イギリス発祥クイズ: 食べ物 =====
