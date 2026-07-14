@@ -1337,6 +1337,25 @@ p {
   }
 }
 
+@media (max-width: 699px) {
+  /* 今回追加した縦長イラストは、2列のまま縦長の比率で大きく見せる。 */
+  .image-grid.large-portrait-choice-images .flag-frame,
+  .static-image-grid.large-portrait-choice-images .flag-frame {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* 国旗は1列にして、細部まで見比べやすくする。 */
+  .image-grid.large-landscape-choice-images,
+  .static-image-grid.large-landscape-choice-images {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid.large-landscape-choice-images .flag-frame,
+  .static-image-grid.large-landscape-choice-images .flag-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 380px) {
   .app-shell {
     padding: 12px 10px 40px;
@@ -2190,7 +2209,7 @@ p {
           </div>
           
           <h2 class="prompt">イギリスの国旗はどれ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid ">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-correct">
@@ -2430,7 +2449,7 @@ p {
           </div>
           
           <h2 class="prompt">地図で見たとき、イギリスの形はどれ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid ">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-correct">
@@ -3760,7 +3779,7 @@ p {
           </div>
           
           <h2 class="prompt">イギリスでタクシーを止めるとき、手はどのように挙げるのが自然？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid ">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-wrong">
@@ -3880,7 +3899,7 @@ p {
           </div>
           
           <h2 class="prompt">イギリスでよく見かける天気や空は、どんな感じ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid ">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-wrong">
@@ -5090,7 +5109,7 @@ p {
           </div>
           
           <h2 class="prompt">イギリスは4つの「国」からできています。ロンドンがあるイングランドの国旗はどれ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid large-landscape-choice-images">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-correct">
@@ -6660,7 +6679,7 @@ p {
           </div>
           
           <h2 class="prompt">紅茶を飲むとき、よいとされる作法はどれ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid large-portrait-choice-images">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-wrong">
@@ -6780,7 +6799,7 @@ p {
           </div>
           
           <h2 class="prompt">食事が済んだとき、「食べ終わりました」の合図になるナイフとフォークの置き方は？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid large-portrait-choice-images">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-correct">
@@ -6900,7 +6919,7 @@ p {
           </div>
           
           <h2 class="prompt">レストランで店員さんを呼びたいとき、自然なのはどれ？</h2>
-          <fieldset class="static-choices static-image-grid">
+          <fieldset class="static-choices static-image-grid large-portrait-choice-images">
             <legend class="sr-only">選択肢</legend>
             
             <label class="static-choice static-image-choice is-wrong">
@@ -13594,6 +13613,7 @@ const questions = [
     prompt:
       "イギリスは4つの「国」からできています。ロンドンがあるイングランドの国旗はどれ？",
     hideChoiceText: true,
+    choiceImageLayout: "large-landscape-choice-images",
     choices: [
       {
         id: "england",
@@ -14151,6 +14171,7 @@ const questions = [
     difficulty: "normal",
     title: "紅茶を飲むときの音",
     prompt: "紅茶を飲むとき、よいとされる作法はどれ？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "slurp", label: "ズズッと音を立てて飲む", imageId: "manners-tea-slurp", explanation: "おそばなら景気のよい音ですが、紅茶ではカップが少しびっくりします。" },
       { id: "quietly", label: "音を立てずに飲む", imageId: "manners-tea-quiet", explanation: "正解！ カップをそっと口に運び、静かにひと口。小指を立てる必要はありません。" },
@@ -14170,6 +14191,7 @@ const questions = [
     difficulty: "normal",
     title: "食べ終わりのナイフとフォーク",
     prompt: "食事が済んだとき、「食べ終わりました」の合図になるナイフとフォークの置き方は？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "six-oclock", label: "6時の方向にそろえる", imageId: "manners-cutlery-six", explanation: "正解！ 2本を平行にそろえ、柄を手前の6時方向へ。お皿の上の小さな「ごちそうさま」です。" },
       { id: "five-oclock", label: "向かって右の5時の位置にそろえる", imageId: "manners-cutlery-japan", explanation: "5時方向に置く方法もありますが、イギリスで迷ったら、6時方向にそろえる方が無難です。" },
@@ -14189,6 +14211,7 @@ const questions = [
     difficulty: "normal",
     title: "店員さんを呼ぶとき",
     prompt: "レストランで店員さんを呼びたいとき、自然なのはどれ？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "snap", label: "指パッチン", imageId: "manners-restaurant-snap", explanation: "ジャズの始まりなら格好いいですが、注文には向いていません。" },
       { id: "eye-contact", label: "目配せをして、来てくれるまで待つ", imageId: "manners-restaurant-eye-contact", explanation: "正解！ 目を合わせて、軽く手を上げるくらいで十分。急がずスマートに待ちます。" },
@@ -16408,7 +16431,7 @@ const renderQuestion = () => {
       </div>
       ${question.questionImageId ? `<div class="question-image-frame">${getQuestionImageMarkup(question)}</div>` : ""}
       <h2 class="prompt">${escapeHtml(question.prompt)}</h2>
-      <div class="${question.type === "single-image-choice" ? "choices-grid image-grid" : "choices-grid text-grid"}">
+      <div class="${question.type === "single-image-choice" ? `choices-grid image-grid ${question.choiceImageLayout || ""}` : "choices-grid text-grid"}">
         ${choicesHtml}
       </div>
       <p class="assist-text">${question.type === "multi-select" ? "正しいと思うものをすべて選んでから「答え合わせ」を押そう。" : "正しいと思う答えを1つ選ぼう。"}</p>

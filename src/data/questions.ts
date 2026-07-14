@@ -887,6 +887,7 @@ export const questions = [
     prompt:
       "イギリスは4つの「国」からできています。ロンドンがあるイングランドの国旗はどれ？",
     hideChoiceText: true,
+    choiceImageLayout: "large-landscape-choice-images",
     choices: [
       {
         id: "england",
@@ -1444,6 +1445,7 @@ export const questions = [
     difficulty: "normal",
     title: "紅茶を飲むときの音",
     prompt: "紅茶を飲むとき、よいとされる作法はどれ？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "slurp", label: "ズズッと音を立てて飲む", imageId: "manners-tea-slurp", explanation: "おそばなら景気のよい音ですが、紅茶ではカップが少しびっくりします。" },
       { id: "quietly", label: "音を立てずに飲む", imageId: "manners-tea-quiet", explanation: "正解！ カップをそっと口に運び、静かにひと口。小指を立てる必要はありません。" },
@@ -1463,6 +1465,7 @@ export const questions = [
     difficulty: "normal",
     title: "食べ終わりのナイフとフォーク",
     prompt: "食事が済んだとき、「食べ終わりました」の合図になるナイフとフォークの置き方は？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "six-oclock", label: "6時の方向にそろえる", imageId: "manners-cutlery-six", explanation: "正解！ 2本を平行にそろえ、柄を手前の6時方向へ。お皿の上の小さな「ごちそうさま」です。" },
       { id: "five-oclock", label: "向かって右の5時の位置にそろえる", imageId: "manners-cutlery-japan", explanation: "5時方向に置く方法もありますが、イギリスで迷ったら、6時方向にそろえる方が無難です。" },
@@ -1482,6 +1485,7 @@ export const questions = [
     difficulty: "normal",
     title: "店員さんを呼ぶとき",
     prompt: "レストランで店員さんを呼びたいとき、自然なのはどれ？",
+    choiceImageLayout: "large-portrait-choice-images",
     choices: [
       { id: "snap", label: "指パッチン", imageId: "manners-restaurant-snap", explanation: "ジャズの始まりなら格好いいですが、注文には向いていません。" },
       { id: "eye-contact", label: "目配せをして、来てくれるまで待つ", imageId: "manners-restaurant-eye-contact", explanation: "正解！ 目を合わせて、軽く手を上げるくらいで十分。急がずスマートに待ちます。" },

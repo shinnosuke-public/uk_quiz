@@ -1330,6 +1330,25 @@ p {
   }
 }
 
+@media (max-width: 699px) {
+  /* 今回追加した縦長イラストは、2列のまま縦長の比率で大きく見せる。 */
+  .image-grid.large-portrait-choice-images .flag-frame,
+  .static-image-grid.large-portrait-choice-images .flag-frame {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* 国旗は1列にして、細部まで見比べやすくする。 */
+  .image-grid.large-landscape-choice-images,
+  .static-image-grid.large-landscape-choice-images {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid.large-landscape-choice-images .flag-frame,
+  .static-image-grid.large-landscape-choice-images .flag-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 380px) {
   .app-shell {
     padding: 12px 10px 40px;

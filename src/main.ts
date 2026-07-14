@@ -415,7 +415,7 @@ const renderQuestion = () => {
       </div>
       ${question.questionImageId ? `<div class="question-image-frame">${getQuestionImageMarkup(question)}</div>` : ""}
       <h2 class="prompt">${escapeHtml(question.prompt)}</h2>
-      <div class="${question.type === "single-image-choice" ? "choices-grid image-grid" : "choices-grid text-grid"}">
+      <div class="${question.type === "single-image-choice" ? `choices-grid image-grid ${question.choiceImageLayout || ""}` : "choices-grid text-grid"}">
         ${choicesHtml}
       </div>
       <p class="assist-text">${question.type === "multi-select" ? "正しいと思うものをすべて選んでから「答え合わせ」を押そう。" : "正しいと思う答えを1つ選ぼう。"}</p>

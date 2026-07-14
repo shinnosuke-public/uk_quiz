@@ -282,7 +282,7 @@ const buildStaticFallback = ({
           </div>
           ${question.questionImageId ? `<div class="question-image-frame">${getQuestionImageMarkup(question)}</div>` : ""}
           <h2 class="prompt">${escapeHtml(question.prompt)}</h2>
-          <fieldset class="static-choices ${isImageQuestion ? "static-image-grid" : "static-text-grid"}">
+          <fieldset class="static-choices ${isImageQuestion ? `static-image-grid ${question.choiceImageLayout || ""}` : "static-text-grid"}">
             <legend class="sr-only">選択肢</legend>
             ${choicesHtml}
           </fieldset>
