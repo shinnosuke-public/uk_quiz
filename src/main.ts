@@ -60,7 +60,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "食べ物",
     kicker: "テーマ別",
-    description: "イギリス生まれの食べ物はどれ？ 意外なふるさとの話。",
+    description: "身近な食文化にひそむ、意外なルーツを探ろう。",
     filter: (question) => question.category === "origin" && question.subcategory === "food"
   },
   {
@@ -68,7 +68,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "スポーツ",
     kicker: "テーマ別",
-    description: "サッカーもゴルフも卓球も？ イギリス発祥のスポーツを探せ。",
+    description: "世界に広がったスポーツのルーツを探ろう。",
     filter: (question) => question.category === "origin" && question.subcategory === "sports"
   },
   {
@@ -76,7 +76,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "乗り物・街",
     kicker: "テーマ別",
-    description: "地下鉄、鉄道、信号機。世界で最初はぜんぶイギリス？",
+    description: "毎日の移動と街のしくみ。その始まりはどこ？",
     filter: (question) => question.category === "origin" && question.subcategory === "transport"
   },
   {
@@ -84,7 +84,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "ファッション",
     kicker: "テーマ別",
-    description: "バーバリー、カーディガン、セーラー服。服の中のイギリス。",
+    description: "いつもの服にひそむ、意外なルーツを探そう。",
     filter: (question) => question.category === "origin" && question.subcategory === "fashion"
   },
   {
@@ -92,7 +92,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "文化・物語",
     kicker: "テーマ別",
-    description: "名探偵、ハリポタ、学校のチャイムまで。イギリス生まれの物語と音楽。",
+    description: "物語、音楽、暮らしにひそむイギリスのルーツ。",
     filter: (question) => question.category === "origin" && question.subcategory === "culture"
   },
   {
@@ -100,7 +100,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "発明・科学",
     kicker: "テーマ別",
-    description: "テレビ、ATM、ニュートンにダーウィン。世界を変えた発明と科学者。",
+    description: "暮らしを変えた発明と科学のルーツを探ろう。",
     filter: (question) => question.category === "origin" && question.subcategory === "tech"
   },
   {
@@ -108,7 +108,7 @@ const quizModes = [
     group: "イギリス発祥クイズ",
     title: "まとめて挑戦",
     kicker: "ぜんぶ",
-    description: "食べ物からファッション、科学まで。発祥問題を全テーマまとめて出題。",
+    description: "イギリス発祥にまつわる問題を、全テーマまとめて出題。",
     filter: (question) => question.category === "origin"
   },
   {
